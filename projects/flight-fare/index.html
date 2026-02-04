@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Fare Prediction | Mohammed Sarim Hani</title>
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="../project-style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../../index.html" class="nav-logo">MSH</a>
+            <ul class="nav-menu">
+                <li><a href="../../index.html#home" class="nav-link">Home</a></li>
+                <li><a href="../../index.html#projects" class="nav-link">Projects</a></li>
+                <li><a href="../../index.html#about" class="nav-link">About</a></li>
+                <li><a href="../../index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme"><span class="theme-icon">🌙</span></button>
+            <a href="../../index.html" class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.9rem;">← Back to Portfolio</a>
+        </div>
+    </nav>
+
+    <main class="project-page">
+        <section class="project-hero">
+            <h1>Prediction of Flight Fare Using Machine Learning</h1>
+            <p class="project-tagline">End‑to‑end price prediction model with Flask deployment</p>
+            <p style="color: var(--text-secondary); max-width: 700px; margin: 0 auto 1rem;">
+                Machine learning model that predicts dynamic airline ticket prices from historical data, helping users find effective fares
+                instead of guessing when to book.
+            </p>
+        </section>
+
+        <div class="project-content">
+            <h2>Overview</h2>
+            <p>
+                This project builds a complete machine learning pipeline to predict airline ticket prices using a real‑world dataset
+                from Kaggle. Airline fares are highly dynamic and depend on many factors such as airline, route, date of journey,
+                number of stops, and flight duration. The goal of the project is to learn these patterns from historical data and
+                estimate a realistic fare for a given trip so that customers can book at an effective price instead of manually
+                checking multiple sites.
+            </p>
+
+            <h2>Data & Feature Engineering</h2>
+            <p>
+                The dataset contains fields such as airline, source, destination, date of journey, departure and arrival times,
+                total stops, route, additional info, and final ticket price. I performed extensive preprocessing and feature
+                engineering:
+            </p>
+            <ul>
+                <li>Parsed <strong>Date of Journey</strong> into separate journey day and journey month features.</li>
+                <li>Extracted <strong>departure</strong> and <strong>arrival</strong> hours and minutes and used them to compute flight duration in hours and minutes.</li>
+                <li>Cleaned and normalized the <strong>Duration</strong> field from values like “4h 45m”, “19h”, or “45m” into numeric duration components.</li>
+                <li>Applied one‑hot encoding to categorical fields such as <strong>Airline</strong>, <strong>Source</strong>, and <strong>Destination</strong> using pandas
+                    <code>get_dummies</code>, dramatically expanding the feature space.</li>
+                <li>Encoded <strong>Total Stops</strong> as an ordinal feature (0, 1, 2, 3, 4) reflecting the increasing travel time and cost.</li>
+                <li>Removed low‑value or redundant columns such as <strong>Route</strong> and <strong>Additional Info</strong> after they were shown to add little signal.</li>
+            </ul>
+
+            <h2>Modeling & Evaluation</h2>
+            <p>
+                After feature engineering, the data was split into independent features <code>X</code> and the target price <code>y</code>. Multiple
+                regression algorithms were evaluated (including linear models and gradient boosting), but a
+                <strong>Random Forest Regressor</strong> provided the best balance of accuracy and robustness.
+            </p>
+            <ul>
+                <li>Initial Random Forest model achieved about <strong>95.35% training R²</strong> and <strong>82.69% test R²</strong>.</li>
+                <li>Hyper‑parameter tuning with <strong>RandomizedSearchCV</strong> (varying number of trees, max depth, min samples split/leaf, and max features) improved the test performance to around <strong>85.73% R²</strong>.</li>
+                <li>Evaluated the model using <strong>MAE</strong>, <strong>MSE</strong>, <strong>RMSE</strong>, and <strong>R²</strong> to quantify error and compare alternatives.</li>
+                <li>Used <strong>Extra Trees Regressor</strong> feature importance to confirm that <strong>Total Stops</strong> and time‑related features were the dominant predictors.</li>
+            </ul>
+
+            <h2>Deployment</h2>
+            <p>
+                The final tuned Random Forest model was serialized (pickled) and deployed as a web application using the
+                <strong>Flask</strong> framework. A simple UI allows users to enter trip details—departure and arrival date/time, airline,
+                source, destination, and number of stops—and the backend reconstructs the same feature pipeline used during
+                training and returns a predicted fare.
+            </p>
+            <ul>
+                <li>Flask app exposes <code>/</code> for the input form and <code>/predict</code> for inference.</li>
+                <li>User inputs are converted into engineered features (date parts, duration, categorical encodings) before being passed to the model.</li>
+                <li>The prediction workflow mirrors the training preprocessing to keep the model consistent and reliable.</li>
+            </ul>
+
+            <h2>Tech Stack</h2>
+            <div class="project-tech-stack">
+                <span class="project-tech-tag">Python</span>
+                <span class="project-tech-tag">Pandas</span>
+                <span class="project-tech-tag">NumPy</span>
+                <span class="project-tech-tag">Scikit‑learn</span>
+                <span class="project-tech-tag">Random Forest Regressor</span>
+                <span class="project-tech-tag">Flask</span>
+                <span class="project-tech-tag">Kaggle Dataset</span>
+            </div>
+
+            <div class="project-links">
+                <a href="../../index.html#projects" class="btn btn-back">← Back to Projects</a>
+            </div>
+        </div>
+    </main>
+    <script>
+        (function(){var t=localStorage.getItem('theme')||(window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);document.querySelector('.theme-icon').textContent=t==='dark'?'☀️':'🌙';document.getElementById('theme-toggle').onclick=function(){var n=document.documentElement.getAttribute('data-theme')==='dark'?'light':'dark';document.documentElement.setAttribute('data-theme',n);localStorage.setItem('theme',n);document.querySelector('.theme-icon').textContent=n==='dark'?'☀️':'🌙';};})();
+    </script>
+</body>
+</html>
+

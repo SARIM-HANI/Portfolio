@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 180">
+  <style>.box{fill:var(--accent-primary,#4dabf7);opacity:0.15;}.label{font:11px sans-serif;fill:currentColor;}</style>
+  <rect class="box" x="15" y="40" width="110" height="80" rx="8"/>
+  <path d="M65 70 L55 55 L75 55 Z" fill="var(--accent-primary,#4dabf7)"/>
+  <circle cx="70" cy="92" r="5" fill="var(--accent-primary,#4dabf7)"/>
+  <text class="label" x="70" y="132" text-anchor="middle">Drone</text>
+  <line x1="135" y1="80" x2="170" y2="80" stroke="currentColor" stroke-width="2"/>
+  <polygon points="165,75 175,80 165,85" fill="currentColor"/>
+  <rect class="box" x="175" y="40" width="110" height="80" rx="8"/>
+  <rect x="195" y="58" width="22" height="16" rx="2" fill="var(--accent-primary,#4dabf7)"/>
+  <rect x="220" y="58" width="22" height="16" rx="2" fill="var(--accent-primary,#4dabf7)"/>
+  <rect x="245" y="58" width="22" height="16" rx="2" fill="var(--accent-primary,#4dabf7)"/>
+  <text class="label" x="230" y="132" text-anchor="middle">GeoTIFF</text>
+  <line x1="295" y1="80" x2="330" y2="80" stroke="currentColor" stroke-width="2"/>
+  <polygon points="325,75 335,80 325,85" fill="currentColor"/>
+  <rect class="box" x="335" y="40" width="110" height="80" rx="8"/>
+  <text class="label" x="390" y="75" text-anchor="middle">NDVI +</text>
+  <text class="label" x="390" y="92" text-anchor="middle">Segmentation</text>
+  <line x1="455" y1="80" x2="490" y2="80" stroke="currentColor" stroke-width="2"/>
+  <polygon points="485,75 495,80 485,85" fill="currentColor"/>
+  <rect class="box" x="495" y="40" width="110" height="80" rx="8"/>
+  <text class="label" x="550" y="75" text-anchor="middle">YOLOv8</text>
+  <text class="label" x="550" y="95" text-anchor="middle" font-size="10">95% Accuracy</text>
+  <line x1="615" y1="80" x2="650" y2="80" stroke="currentColor" stroke-width="2"/>
+  <polygon points="645,75 655,80 645,85" fill="currentColor"/>
+  <rect class="box" x="655" y="40" width="110" height="80" rx="8"/>
+  <text class="label" x="710" y="78" text-anchor="middle">Progress</text>
+  <text class="label" x="710" y="95" text-anchor="middle">Report</text>
+</svg>

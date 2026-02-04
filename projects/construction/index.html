@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Construction Progress Monitoring | Mohammed Sarim Hani</title>
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="../project-style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../../index.html" class="nav-logo">MSH</a>
+            <ul class="nav-menu">
+                <li><a href="../../index.html#home" class="nav-link">Home</a></li>
+                <li><a href="../../index.html#projects" class="nav-link">Projects</a></li>
+                <li><a href="../../index.html#about" class="nav-link">About</a></li>
+                <li><a href="../../index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme"><span class="theme-icon">🌙</span></button>
+            <a href="../../index.html" class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.9rem;">← Back to Portfolio</a>
+        </div>
+    </nav>
+
+    <main class="project-page">
+        <section class="project-hero">
+            <h1>Automated Construction Progress Monitoring</h1>
+            <p class="project-tagline">Research Assistant | Western New England University</p>
+            <p style="color: var(--text-secondary); max-width: 600px; margin: 0 auto 1rem;">Mar 2024 – Aug 2024</p>
+            
+            <!-- Workflow diagram - helps new users understand the project -->
+            <img src="../../assets/images/construction-workflow.svg" alt="Construction monitoring workflow: Drone Imagery → GeoTIFF → NDVI Segmentation → YOLOv8 → Progress Report" class="project-hero-image">
+        </section>
+
+        <div class="project-content">
+            <h2>Overview</h2>
+            <p>
+                This research project developed an automated system for construction site analysis using drone imagery and GeoTIFF files. 
+                The system reduces reliance on manual processes by using pixel-based analysis and NDVI-based image segmentation to measure 
+                progress, distances, and production rates. YOLOv8 models were trained on GeoTIFF data, improving classification accuracy 
+                from 80% to 95% for pavements and roads.
+            </p>
+
+            <h2>Approaches</h2>
+            <div class="project-features">
+                <div class="project-feature">
+                    <h3>📐 Pixel-Based Progress</h3>
+                    <p>Calculates construction progress by comparing pixel changes between two ortho images. Uses NDVI (Normalized Difference Vegetation Index) for segmentation and band analysis with Rasterio and Matplotlib.</p>
+                </div>
+                <div class="project-feature">
+                    <h3>📏 Segmentation & Measurement</h3>
+                    <p>Binary segmentation with configurable thresholds. Interactive point selection for measuring distances using latitude/longitude coordinates and production rate calculation.</p>
+                </div>
+                <div class="project-feature">
+                    <h3>🤖 YOLOv8 Classification</h3>
+                    <p>Deep learning model trained on GeoTIFF files to classify pavements and roads with 95% accuracy, up from 80% with previous methods.</p>
+                </div>
+            </div>
+
+            <h2>Tech Stack</h2>
+            <div class="project-tech-stack">
+                <span class="project-tech-tag">Python</span>
+                <span class="project-tech-tag">YOLOv8</span>
+                <span class="project-tech-tag">Rasterio</span>
+                <span class="project-tech-tag">NumPy</span>
+                <span class="project-tech-tag">Matplotlib</span>
+                <span class="project-tech-tag">OpenCV</span>
+                <span class="project-tech-tag">GeoTIFF</span>
+            </div>
+
+            <h2>Analysis & Results</h2>
+            <div class="project-image-grid">
+                <figure>
+                    <img src="../../assets/images/Screenshot 2026-02-04 071525.png" 
+                         alt="Total length measurement overlay across construction area" 
+                         class="project-detail-image">
+                    <figcaption style="margin-top:0.75rem; color: var(--text-secondary); font-size: 0.95rem;">
+                        Length‑calculation view showing the total measured paving stretch, which feeds into the production‑rate metrics for each time period.
+                    </figcaption>
+                </figure>
+                <figure>
+                    <img src="../../assets/images/Screenshot 2026-02-04 071756.png" 
+                         alt="Production rate time sheet for each flight" 
+                         class="project-detail-image">
+                    <figcaption style="margin-top:0.75rem; color: var(--text-secondary); font-size: 0.95rem;">
+                        Production‑rate table summarizing width, length, and area/time for each flight, used to quantify how efficiently pavement is removed and placed.
+                    </figcaption>
+                </figure>
+                <figure>
+                    <img src="../../assets/images/Screenshot 2026-02-04 070837.png" 
+                         alt="YOLO-based detection of paver and road sections across multiple flights" 
+                         class="project-detail-image">
+                    <figcaption style="margin-top:0.75rem; color: var(--text-secondary); font-size: 0.95rem;">
+                        YOLOv8 detection outputs across multiple flights, highlighting the paver and newly constructed road segments with confidence scores used to monitor progress.
+                    </figcaption>
+                </figure>
+            </div>
+
+            <div class="project-links">
+                <a href="../../index.html#projects" class="btn btn-back">← Back to Projects</a>
+            </div>
+        </div>
+    </main>
+    <script>
+        (function(){var t=localStorage.getItem('theme')||(window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);document.querySelector('.theme-icon').textContent=t==='dark'?'☀️':'🌙';document.getElementById('theme-toggle').onclick=function(){var n=document.documentElement.getAttribute('data-theme')==='dark'?'light':'dark';document.documentElement.setAttribute('data-theme',n);localStorage.setItem('theme',n);document.querySelector('.theme-icon').textContent=n==='dark'?'☀️':'🌙';};})();
+    </script>
+</body>
+</html>

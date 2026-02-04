@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SBOM Creation Tool | Mohammed Sarim Hani</title>
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="../project-style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../../index.html" class="nav-logo">MSH</a>
+            <ul class="nav-menu">
+                <li><a href="../../index.html#home" class="nav-link">Home</a></li>
+                <li><a href="../../index.html#projects" class="nav-link">Projects</a></li>
+                <li><a href="../../index.html#about" class="nav-link">About</a></li>
+                <li><a href="../../index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme"><span class="theme-icon">🌙</span></button>
+            <a href="../../index.html" class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.9rem;">← Back to Portfolio</a>
+        </div>
+    </nav>
+
+    <main class="project-page">
+        <section class="project-hero">
+            <h1>Automated SBOM Creation Tool</h1>
+            <p class="project-tagline">Developing Automated Tools to Create Software Bill of Materials</p>
+            <p style="color: var(--text-secondary); max-width: 600px; margin: 0 auto 1rem;">Capstone Project | Western New England University | Dec 2025</p>
+            
+            <!-- Workflow diagram - helps new users understand the project -->
+            <img src="../../assets/images/sbom-workflow.svg" alt="SBOM workflow: Source Code → Syft → SBOM Data → MySQL DB → Grype Vulnerability Scan" class="project-hero-image">
+        </section>
+
+        <div class="project-content">
+            <h2>Overview</h2>
+            <p>
+                This project develops automated tools to create and manage Software Bill of Materials (SBOM) for open-source projects. 
+                An SBOM is a structured list of all components in a software system—libraries, dependencies, and third-party packages. 
+                It helps teams track what's inside their software, check licenses, and identify security vulnerabilities early.
+            </p>
+
+            <h2>What It Does</h2>
+            <div class="project-features">
+                <div class="project-feature">
+                    <h3>🔍 Component Discovery</h3>
+                    <p>Uses Syft to scan source code and container images, extracting all libraries, versions, and licenses automatically.</p>
+                </div>
+                <div class="project-feature">
+                    <h3>📊 Database Storage</h3>
+                    <p>Stores SBOM records in MySQL for continuous tracking and version comparison between builds.</p>
+                </div>
+                <div class="project-feature">
+                    <h3>🛡️ Vulnerability Scanning</h3>
+                    <p>Integrates Grype to detect known security risks in dependencies and flags outdated or risky components.</p>
+                </div>
+                <div class="project-feature">
+                    <h3>🔄 Version Comparison</h3>
+                    <p>Web-based tool compares SBOMs between software versions to spot added, removed, or upgraded components.</p>
+                </div>
+            </div>
+
+            <h2>Tech Stack</h2>
+            <div class="project-tech-stack">
+                <span class="project-tech-tag">Python</span>
+                <span class="project-tech-tag">Flask</span>
+                <span class="project-tech-tag">MySQL</span>
+                <span class="project-tech-tag">Syft</span>
+                <span class="project-tech-tag">Grype</span>
+                <span class="project-tech-tag">SPDX</span>
+                <span class="project-tech-tag">CycloneDX</span>
+            </div>
+
+            <div class="project-links">
+                <a href="../../index.html#projects" class="btn btn-back">← Back to Projects</a>
+            </div>
+        </div>
+    </main>
+    <script>
+        (function(){var t=localStorage.getItem('theme')||(window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);document.querySelector('.theme-icon').textContent=t==='dark'?'☀️':'🌙';document.getElementById('theme-toggle').onclick=function(){var n=document.documentElement.getAttribute('data-theme')==='dark'?'light':'dark';document.documentElement.setAttribute('data-theme',n);localStorage.setItem('theme',n);document.querySelector('.theme-icon').textContent=n==='dark'?'☀️':'🌙';};})();
+    </script>
+</body>
+</html>

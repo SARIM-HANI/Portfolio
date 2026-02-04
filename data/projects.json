@@ -1,0 +1,44 @@
+{
+  "projects": [
+    {
+      "title": "Automated SBOM Creation Tool",
+      "description": "Developed automated tools to create Software Bill of Materials for open-source projects. Built a Flask web application with MySQL database integration. Uses Syft for SBOM generation and Grype for vulnerability scanning. Implements SBOM comparison between software versions to detect added, removed, or updated components. Includes monitoring for version updates and security risks.",
+      "techStack": ["Python", "Flask", "MySQL", "Syft", "Grype", "SPDX", "CycloneDX"],
+      "github": null,
+      "demo": null,
+      "image": null,
+      "codePath": "projects/sbom",
+      "projectPage": "projects/sbom/index.html"
+    },
+    {
+      "title": "Automated Construction Progress Monitoring",
+      "description": "Research project at Western New England University. Developed automated system for construction site analysis using drone imagery and GeoTIFF files. Implemented pixel-based progress calculation and NDVI-based image segmentation. Achieved 95% accuracy (up from 80%) by training YOLOv8 models. Used Rasterio, NumPy, and Matplotlib for geospatial analysis and distance/production rate measurements.",
+      "techStack": ["Python", "YOLOv8", "Rasterio", "NumPy", "Matplotlib", "OpenCV", "GeoTIFF"],
+      "github": null,
+      "demo": null,
+      "image": null,
+      "codePath": "projects/construction",
+      "projectPage": "projects/construction/index.html"
+    },
+    {
+      "title": "Flight Fare Prediction Using Machine Learning",
+      "description": "Machine learning project that predicts dynamic airline ticket prices so travelers can book at effective fares. Built an end-to-end pipeline on a Kaggle dataset, including extensive feature engineering on date/time, duration, route, and stops, followed by model training and deployment as a Flask web app that returns predicted fare for a given trip.",
+      "techStack": ["Python", "Pandas", "NumPy", "Scikit-learn", "Random Forest", "Flask", "Kaggle"],
+      "github": null,
+      "demo": null,
+      "image": null,
+      "codePath": "projects/flight-fare",
+      "projectPage": "projects/flight-fare/index.html"
+    },
+    {
+      "title": "Table Tennis 3D",
+      "description": "3D table tennis game built in Unity focusing on realistic physics, paddle control, and a complete scoring loop. Implemented C# scripts for ball movement, collision handling, game state, and camera control, then exported a standalone Windows build for playtesting.",
+      "techStack": ["Unity", "C#", "3D Physics"],
+      "github": null,
+      "demo": null,
+      "image": null,
+      "codePath": "projects/table-tennis",
+      "projectPage": "projects/table-tennis/index.html"
+    }
+  ]
+}

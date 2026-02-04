@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 180">
+  <style>.box{fill:var(--accent-primary,#4dabf7);opacity:0.15;}.box:hover{opacity:0.25;}.label{font:12px sans-serif;fill:currentColor;}</style>
+  <rect class="box" x="20" y="50" width="110" height="60" rx="8"/>
+  <text class="label" x="75" y="88" text-anchor="middle">Source Code</text>
+  <line x1="140" y1="80" x2="180" y2="80" stroke="currentColor" stroke-width="2"/>
+  <polygon points="175,75 185,80 175,85" fill="currentColor"/>
+  <rect class="box" x="190" y="50" width="110" height="60" rx="8"/>
+  <text class="label" x="245" y="88" text-anchor="middle">Syft Scanner</text>
+  <line x1="310" y1="80" x2="350" y2="80" stroke="currentColor" stroke-width="2"/>
+  <polygon points="345,75 355,80 345,85" fill="currentColor"/>
+  <rect class="box" x="360" y="50" width="110" height="60" rx="8"/>
+  <text class="label" x="415" y="88" text-anchor="middle">SBOM Data</text>
+  <line x1="480" y1="80" x2="520" y2="80" stroke="currentColor" stroke-width="2"/>
+  <polygon points="515,75 525,80 515,85" fill="currentColor"/>
+  <rect class="box" x="530" y="50" width="110" height="60" rx="8"/>
+  <text class="label" x="585" y="88" text-anchor="middle">MySQL DB</text>
+  <line x1="650" y1="80" x2="690" y2="80" stroke="currentColor" stroke-width="2"/>
+  <polygon points="685,75 695,80 685,85" fill="currentColor"/>
+  <rect class="box" x="700" y="50" width="90" height="60" rx="8"/>
+  <text class="label" x="745" y="88" text-anchor="middle">Grype</text>
+  <text class="label" x="745" y="102" text-anchor="middle" font-size="10">Vuln Scan</text>
+</svg>

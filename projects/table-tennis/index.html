@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Tennis 3D | Mohammed Sarim Hani</title>
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="../project-style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../../index.html" class="nav-logo">MSH</a>
+            <ul class="nav-menu">
+                <li><a href="../../index.html#home" class="nav-link">Home</a></li>
+                <li><a href="../../index.html#projects" class="nav-link">Projects</a></li>
+                <li><a href="../../index.html#about" class="nav-link">About</a></li>
+                <li><a href="../../index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme"><span class="theme-icon">🌙</span></button>
+            <a href="../../index.html" class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.9rem;">← Back to Portfolio</a>
+        </div>
+    </nav>
+
+    <main class="project-page">
+        <section class="project-hero">
+            <h1>Table Tennis 3D</h1>
+            <p class="project-tagline">3D Unity game with realistic physics and game loop</p>
+            <p style="color: var(--text-secondary); max-width: 700px; margin: 0 auto 1rem;">
+                A fast‑paced 3D table tennis game built in Unity, focusing on responsive controls, ball physics, and a polished
+                gameplay experience.
+            </p>
+        </section>
+
+        <div class="project-content">
+            <h2>Overview</h2>
+            <p>
+                Table Tennis 3D is a desktop game built using the Unity Engine. The project focuses on realistic paddle and ball
+                interactions, intuitive controls, and a smooth camera experience that keeps the player immersed at the table.
+                The game implements core gameplay systems such as serving, rallying, scoring, and win conditions, all driven by
+                C# scripts attached to Unity game objects.
+            </p>
+
+            <h2>Gameplay & Mechanics</h2>
+            <ul>
+                <li>Implemented table, net, paddles, and ball as 3D objects with colliders and rigidbody physics for realistic bounces and spin.</li>
+                <li>Built an input system to control paddle movement and swing timing using keyboard / mouse input mapped through Unity’s Input Manager.</li>
+                <li>Designed a scoring system that tracks player points, serves, and game‑over conditions with UI updates.</li>
+                <li>Added basic opponent behavior and ball‑return logic to keep rallies engaging and challenging.</li>
+            </ul>
+
+            <h2>Technical Implementation</h2>
+            <ul>
+                <li>Used <strong>C# scripts</strong> to manage game state, physics interactions, and scoring logic.</li>
+                <li>Tuned <strong>rigidbody</strong> parameters (mass, drag, gravity) and <strong>Physics Materials</strong> to get believable ball bounce and paddle response.</li>
+                <li>Configured cameras with a follow/track behavior so the player always has a clear view of the table and rally.</li>
+                <li>Built a standalone Windows build using Unity’s build pipeline (the <code>Table Tennis 3d.exe</code> and data folders you provided).</li>
+            </ul>
+
+            <h2>Tech Stack</h2>
+            <div class="project-tech-stack">
+                <span class="project-tech-tag">Unity</span>
+                <span class="project-tech-tag">C#</span>
+                <span class="project-tech-tag">3D Physics</span>
+                <span class="project-tech-tag">Mono / .NET</span>
+            </div>
+
+            <div class="project-links">
+                <a href="../../index.html#projects" class="btn btn-back">← Back to Projects</a>
+            </div>
+        </div>
+    </main>
+    <script>
+        (function(){var t=localStorage.getItem('theme')||(window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);document.querySelector('.theme-icon').textContent=t==='dark'?'☀️':'🌙';document.getElementById('theme-toggle').onclick=function(){var n=document.documentElement.getAttribute('data-theme')==='dark'?'light':'dark';document.documentElement.setAttribute('data-theme',n);localStorage.setItem('theme',n);document.querySelector('.theme-icon').textContent=n==='dark'?'☀️':'🌙';};})();
+    </script>
+</body>
+</html>
+
