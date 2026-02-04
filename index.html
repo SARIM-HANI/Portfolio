@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohammed Sarim Hani - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">MSH</div>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                <span class="theme-icon">🌙</span>
+            </button>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Mohammed Sarim Hani</h1>
+            <p class="hero-subtitle">Master's Student in Computer Science</p>
+            <p class="hero-description">
+                Passionate about Deep Learning, Neural Networks, and AI. Building innovative solutions 
+                through research and development.
+            </p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn btn-primary">View Projects</a>
+                <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        Machine Learning Engineer and Researcher with hands on experience in developing deep learning models and data 
+                        driven solutions. Achieved 95% accuracy (up from 80%) by fine tuning a YOLOv8 computer vision model for construction 
+                        site monitoring, and built multiple ML projects from scratch to deployment. Skilled in Python, deep learning frameworks 
+                        (TensorFlow, PyTorch), computer vision (object detection, image segmentation), and data analytics, with a track record of 
+                        delivering innovative solutions in both tech and academic environments.
+                    </p>
+                </div>
+
+                <!-- Skills -->
+                <div class="skills">
+                    <h3>Technical Skills</h3>
+                    <div class="skills-category">
+                        <h4>Programming</h4>
+                        <div class="skills-tags">
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">JAVA</span>
+                            <span class="skill-tag">C++</span>
+                            <span class="skill-tag">HTML</span>
+                            <span class="skill-tag">CSS</span>
+                            <span class="skill-tag">JavaScript</span>
+                        </div>
+                    </div>
+                    <div class="skills-category">
+                        <h4>Frameworks & Libraries</h4>
+                        <div class="skills-tags">
+                            <span class="skill-tag">TensorFlow</span>
+                            <span class="skill-tag">PyTorch</span>
+                            <span class="skill-tag">Keras</span>
+                            <span class="skill-tag">scikit-learn</span>
+                            <span class="skill-tag">OpenCV</span>
+                            <span class="skill-tag">Flask</span>
+                            <span class="skill-tag">NumPy</span>
+                            <span class="skill-tag">Pandas</span>
+                            <span class="skill-tag">YOLO</span>
+                        </div>
+                    </div>
+                    <div class="skills-category">
+                        <h4>Database</h4>
+                        <div class="skills-tags">
+                            <span class="skill-tag">SQL (MySQL)</span>
+                            <span class="skill-tag">NoSQL (MongoDB, Redis)</span>
+                            <span class="skill-tag">Graph DB (Neo4j)</span>
+                        </div>
+                    </div>
+                    <div class="skills-category">
+                        <h4>Tools</h4>
+                        <div class="skills-tags">
+                            <span class="skill-tag">Git/GitHub</span>
+                            <span class="skill-tag">Google Colab</span>
+                            <span class="skill-tag">Anaconda</span>
+                            <span class="skill-tag">Docker</span>
+                            <span class="skill-tag">Power BI</span>
+                            <span class="skill-tag">Linux (Kali)</span>
+                            <span class="skill-tag">Nessus</span>
+                            <span class="skill-tag">Agile/Scrum</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+            
+            <!-- Search and Filter Controls -->
+            <div class="projects-controls">
+                <div class="project-dropdown-box">
+                    <select id="project-select" aria-label="Select a project">
+                        <option value="">Select a project...</option>
+                    </select>
+                </div>
+                <div class="filter-box">
+                    <select id="filter-select" aria-label="Filter by tech stack">
+                        <option value="">All Technologies</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Projects Grid -->
+            <div id="projects-grid" class="projects-grid">
+                <!-- Projects will be dynamically loaded here -->
+                <p class="loading-message">Loading projects...</p>
+            </div>
+
+            <!-- Project Detail Panel (updates when user selects from dropdown) -->
+            <div id="project-detail" class="project-detail hidden">
+                <h3 id="project-detail-title" class="project-detail-title"></h3>
+                <div class="project-detail-grid">
+                    <div class="project-detail-section">
+                        <h4>Languages & Tools</h4>
+                        <ul id="project-detail-languages"></ul>
+
+                        <h4>Skills Learned</h4>
+                        <ul id="project-detail-skills"></ul>
+
+                        <h4>Experience Gained</h4>
+                        <ul id="project-detail-experience"></ul>
+                    </div>
+                    <div class="project-detail-section">
+                        <h4>Project Visual</h4>
+                        <!-- You can replace these images with real screenshots later -->
+                        <img id="project-detail-image" class="project-detail-image" src="" alt="Project screenshot">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education-section">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+            <div class="education-content">
+                <div class="education-item">
+                    <h4>Master of Science in Computer Science</h4>
+                    <p class="institution">Western New England University, Springfield, MA, USA</p>
+                </div>
+                <div class="education-item">
+                    <h4>Bachelor of Engineering in Computer Science</h4>
+                    <p class="institution">Joginpally B.R Engineering College, India</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="contact-description">
+                I'm always open to discussing new opportunities, collaborations, or just having a chat 
+                about technology and innovation.
+            </p>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <strong>Location:</strong> Springfield, MA, USA
+                </div>
+                <div class="contact-item">
+                    <strong>Email:</strong> 
+                    <a href="mailto:sarimhani786@gmail.com">sarimhani786@gmail.com</a>
+                </div>
+                <div class="contact-item">
+                    <strong>Phone:</strong> 413-8832650
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Mohammed Sarim Hani. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="https://github.com/Sarim-hani" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                        GitHub
+                    </a>
+                    <a href="mailto:sarimhani786@gmail.com" aria-label="Email">
+                        Email
+                    </a>
+                    <!-- Add LinkedIn link when available -->
+                    <!-- <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        LinkedIn
+                    </a> -->
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Fallback project data - used when fetch fails (e.g. opening locally via file://) -->
+    <script type="application/json" id="projects-fallback">
+    {"projects":[
+      {"title":"Automated SBOM Creation Tool","description":"Developed automated tools to create Software Bill of Materials for open-source projects. Built a Flask web application with MySQL database integration. Uses Syft for SBOM generation and Grype for vulnerability scanning. Implements SBOM comparison between software versions to detect added, removed, or updated components. Includes monitoring for version updates and security risks.","techStack":["Python","Flask","MySQL","Syft","Grype","SPDX","CycloneDX"],"github":null,"demo":null,"image":null,"codePath":"projects/sbom","projectPage":"projects/sbom/index.html"},
+      {"title":"Automated Construction Progress Monitoring","description":"Research project at Western New England University. Developed automated system for construction site analysis using drone imagery and GeoTIFF files. Implemented pixel-based progress calculation and NDVI-based image segmentation. Achieved 95% accuracy (up from 80%) by training YOLOv8 models. Used Rasterio, NumPy, and Matplotlib for geospatial analysis and distance/production rate measurements.","techStack":["Python","YOLOv8","Rasterio","NumPy","Matplotlib","OpenCV","GeoTIFF"],"github":null,"demo":null,"image":null,"codePath":"projects/construction","projectPage":"projects/construction/index.html"},
+      {"title":"Flight Fare Prediction Using Machine Learning","description":"Machine learning project that predicts dynamic airline ticket prices so travelers can book at effective fares. Built an end-to-end pipeline on a Kaggle dataset, including extensive feature engineering on date/time, duration, route, and stops, followed by model training and deployment as a Flask web app that returns predicted fare for a given trip.","techStack":["Python","Pandas","NumPy","Scikit-learn","Random Forest","Flask","Kaggle"],"github":null,"demo":null,"image":null,"codePath":"projects/flight-fare","projectPage":"projects/flight-fare/index.html"}
+      ,{"title":"Table Tennis 3D","description":"3D table tennis game built in Unity focusing on realistic physics, paddle control, and a complete scoring loop. Implemented C# scripts for ball movement, collision handling, game state, and camera control, then exported a standalone Windows build for playtesting.","techStack":["Unity","C#","3D Physics"],"github":null,"demo":null,"image":null,"codePath":"projects/table-tennis","projectPage":"projects/table-tennis/index.html"}
+    ]}
+    </script>
+    <script src="app.js"></script>
+</body>
+</html>
